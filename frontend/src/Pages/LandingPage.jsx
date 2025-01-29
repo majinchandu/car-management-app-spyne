@@ -50,7 +50,7 @@ const LandingPage = () => {
         const fetchCars = async () => {
             if (!userId) return;
             try {
-                const response = await fetch(`http://localhost:5000/cars/${userId}`);
+                const response = await fetch(`https://car-management-app-spyne-backend.onrender.com/cars/${userId}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -82,7 +82,7 @@ const LandingPage = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/deleteCar/${carId}`, {
+            const response = await fetch(`https://car-management-app-spyne-backend.onrender.com/deleteCar/${carId}`, {
                 method: 'DELETE',
             });
 
@@ -133,7 +133,7 @@ const LandingPage = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/addCar", {
+            const response = await fetch("https://car-management-app-spyne-backend.onrender.com/addCar", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -189,7 +189,7 @@ const LandingPage = () => {
 
         try {
             const response = editingCar
-                ? await fetch(`http://localhost:5000/updateCar/${editingCar._id}`, {
+                ? await fetch(`https://car-management-app-spyne-backend.onrender.com/updateCar/${editingCar._id}`, {
                     method: "PUT",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(carData),
