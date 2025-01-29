@@ -14,7 +14,7 @@ const Login = (props) => {
     useEffect(() => {
         const authh = localStorage.getItem("user")
         if (authh) {
-            Navigate('/userData');
+            Navigate('/landingPage');
         }
     })
 
