@@ -78,7 +78,7 @@ const RegisterUser = () => {
             checks.specialCharCheck && email && name && password) {
 
             e.preventDefault() // ye bhai humesha daalna iski wajah se code nhi chalega kyunki ispe mai ghanto tak atka rha tha ding ding
-            let resultt = await fetch('http://localhost:5000/registerUser', { // connecting frontend with backend
+            let resultt = await fetch('https://car-management-app-spyne-backend.onrender.com/registerUser', { // connecting frontend with backend
                 method: 'POST',// method post hai
                 body: JSON.stringify({ email, password, name }),//connecting frontend and backend , jo idhar se data jaaye wo backend me store hojaye aur firr backend me jaake wo data mongoDB me store hojayee
                 // ye name ,email,password wala data backend ki body me jaake store ho rha hai
