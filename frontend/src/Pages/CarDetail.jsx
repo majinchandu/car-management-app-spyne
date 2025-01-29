@@ -122,7 +122,7 @@ const CarDetail = () => {
   useEffect(() => {
     const fetchCarDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/carDetail/${carId}`);
+        const response = await fetch(`https://car-management-app-spyne-backend.onrender.com/carDetail/${carId}`);
         const data = await response.json();
         setCar(data);
         setLoading(false);
